@@ -1,5 +1,9 @@
 # README
 
+troubleshooting: rails webpacker:install
+- then "rails s" should work.
+Also rails new . has worked in past (not last time).
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
