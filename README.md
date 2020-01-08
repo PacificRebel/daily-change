@@ -1,5 +1,8 @@
 # README
 
+This Rails app will calculate the impact simple lifestyle changes will have on  
+your carbon footprint.
+
 troubleshooting: rails webpacker:install
 - then "rails s" should work.
 Also rails new . has worked in past (not last time).
