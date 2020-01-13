@@ -8,3 +8,18 @@
 <center>
 <h2> Hello and welcome to the DailyChange space - are you ready to make a change?
   </h2>
+  <%= form_with scope: :behaviour, local: true do |form| %>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </p>
+
+    <p>
+      <%= form.label :text %><br>
+      <%= form.text_area :text %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
