@@ -8,7 +8,7 @@
 <center>
 <h2> Hello and welcome to the DailyChange space - are you ready to make a change?
   </h2>
-  <%= form_with scope: :behaviour, local: true do |form| %>
+  <%= form_with scope: :behaviour, url: behaviours_path, local: true do |form| %>
     <p>
       <%= form.label :title %><br>
       <%= form.text_field :title %>
