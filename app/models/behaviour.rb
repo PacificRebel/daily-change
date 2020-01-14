@@ -1,0 +1,2 @@
+class Behaviour < ApplicationRecord
+end
