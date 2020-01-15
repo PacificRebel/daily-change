@@ -9,13 +9,17 @@ class BehavioursController < ApplicationController
   end
 
   def new
+    @behaviour = Behaviour.new
   end
 
   def create
-    @behaviour = Behaviour.new(params.require(:behaviour).permit(:title, :text))
+    @behaviour = Behaviour.new(behaviour_params)
 
-    @behaviour.save
-    redirect_to @behaviour
+    if @behaviour.save
+      redirect_to @behaviour
+    else
+      render 'new'
+    end
   end
 
   private
