@@ -23,3 +23,23 @@
       <%= form.submit %>
     </p>
   <% end %>
+<br>
+<br>
+
+  <h2>Actions so far:</h2>
+<br>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th></th>
+    </tr>
+
+    <% @behaviour.each do |behaviour| %>
+      <tr>
+        <td><%= behaviour.title %></td>
+        <td><%= behaviour.text %></td>
+        <td><%= link_to 'Show', behaviour_path(behaviour) %></td>
+      </tr>
+    <% end %>
+  </table>

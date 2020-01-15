@@ -1,13 +1,14 @@
 class BehavioursController < ApplicationController
 
+  def index
+    @behaviour = Behaviour.all
+  end
+
   def show
     @behaviour = Behaviour.find(params[:id])
   end
 
   def new
-  end
-
-  def index
   end
 
   def create
