@@ -32,7 +32,7 @@
     <tr>
       <th>Title</th>
       <th>Text</th>
-      <th></th>
+      <th colspan="2"></th>
     </tr>
 
     <% @behaviour.each do |behaviour| %>
@@ -40,6 +40,7 @@
         <td><%= behaviour.title %></td>
         <td><%= behaviour.text %></td>
         <td><%= link_to 'Show', behaviour_path(behaviour) %></td>
+        <td><%= link_to 'Edit', edit_behaviour_path(behaviour) %></td>
       </tr>
     <% end %>
     <%= link_to 'New behaviour', new_behaviour_path %>
