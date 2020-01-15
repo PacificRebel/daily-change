@@ -9,33 +9,10 @@
 </p>
 
 <h2>Comments</h2>
-<% @behaviour.comments.each do |comment| %>
-<p>
-  <strong>Name of commenter:</strong>
-  <%= comment.commenter %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
-<% end %>
+<%= render @behaviour.comments %>
 
 <h2>Add a comment:</h2>
-<%= form_with(model: [ @behaviour, @behaviour.comments.build ],
-local: true) do |form| %>
-<p>
-  <%= form.label :commenter %><br>
-  <%= form.text_field :commenter %>
-</p>
-<p>
-  <%= form.label :body %><br>
-  <%= form.text_area :body %>
-</p>
-<p>
-  <%= form.submit %>
-</p>
-<% end %>
+<%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_behaviour_path(@behaviour) %> |
 <%= link_to 'Back', behaviours_path %>
