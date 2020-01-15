@@ -5,8 +5,15 @@ class CommentsController < ApplicationController
     redirect_to behaviour_path(@behaviour)
   end
 
+  def destroy
+    @behaviour = Behaviour.find(params[:behaviour_id])
+    @comment = @behaviour.comments.find(params[:id])
+    @comment.destroy
+    redirect_to behaviour_path(@behaviour)
+  end
+
   private
     def comment_params
       params.require(:comment).permit(:commenter, :body)
     end
-end 
+end
