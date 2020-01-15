@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+
+  http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
+
   def create
     @behaviour = Behaviour.find(params[:behaviour_id])
     @comment = @behaviour.comments.create(comment_params)
