@@ -41,8 +41,10 @@
         <td><%= behaviour.text %></td>
         <td><%= link_to 'Show', behaviour_path(behaviour) %></td>
         <td><%= link_to 'Edit', edit_behaviour_path(behaviour) %></td>
+        <td><%= link_to 'Delete', behaviour_path(behaviour),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
     <%= link_to 'New behaviour', new_behaviour_path %>
-
   </table>

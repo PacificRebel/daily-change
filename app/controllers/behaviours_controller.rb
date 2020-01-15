@@ -36,6 +36,13 @@ class BehavioursController < ApplicationController
     end
   end
 
+  def destroy
+    @behaviour = Behaviour.find(params[:id])
+    @behaviour.destroy
+
+    redirect_to behaviours_path
+  end
+
   private
     def behaviour_params
       params.require(:behaviour).permit(:title, :text)
