@@ -29,3 +29,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+try this for timestamp (recommended for Rails:
+  config/initializers/time_formats.rb
+Date::DATE_FORMATS[:stamp] = "%Y%m%d" # YYYYMMDD
+Time::DATE_FORMATS[:stamp] = "%Y%m%d%H%M%S" # YYYYMMDDHHMMSS
+Then in the views.
+
+<%= @user.last_signed_in_at.to_s(:stamp) %>
