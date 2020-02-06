@@ -30,7 +30,7 @@ Things you may want to cover:
 
 * ...
 
-try this for timestamp (recommended for Rails:
+try this for timestamp (recommended for Rails (in application.html.erb):
   config/initializers/time_formats.rb
 Date::DATE_FORMATS[:stamp] = "%Y%m%d" # YYYYMMDD
 Time::DATE_FORMATS[:stamp] = "%Y%m%d%H%M%S" # YYYYMMDDHHMMSS
